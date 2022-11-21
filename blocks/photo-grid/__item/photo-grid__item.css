@@ -1,0 +1,8 @@
+.photo-grid__item {
+  width: 100%;
+  background-color: #FFF;
+  display: grid;
+  grid-template-rows: 282px 1fr;
+  position: relative;
+  border-radius: 10px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Mesto</title>
+</head>
+
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="./images/header__logo.svg" alt="logo Mesto Russia">
+  </header>
+  <main>
+    <section class="profile">
+      <img class="profile__avatar" src="./images/avatar.png" alt="profile picture">
+      <div class="profile__info">
+        <div class="profile__box">
+          <h2 class="profile__name">Jacques-Yves Cousteau</h2>
+          <button class="profile__button-edit" type="button"></button>
+      </div>
+      <p class="profile__description">Ocean Explorer</p>
+      </div>
+      <button class="profile__button-add" type="button"></button>
+    </section>
+    <section class="photo-grid">
+      <ul class="photo-grid__list">
+        <li class="photo-grid__item">
+          <img class="photo-grid__image" src="./images/karachay-cherkessia.jpg" alt="photo of Karachayevsk">
+          <div class="photo-grid__description">
+            <h2 class="photo-grid__title">Karachayevsk</h2>
+            <button class="photo-grid__button-like" type="button"></button>
+          </div>
+        </li>
+        <li class="photo-grid__item">
+          <img class="photo-grid__image" src="./images/mount-elbrus.jpg" alt="photo of Mount Elbrus">
+          <div class="photo-grid__description">
+            <h2 class="photo-grid__title">Mount Elbrus</h2>
+            <button class="photo-grid__button-like" type="button"></button>
+          </div>
+        </li>
+        <li class="photo-grid__item">
+          <img class="photo-grid__image" src="./images/dombay.jpg" alt="photo of Dombay">
+          <div class="photo-grid__description">
+            <h2 class="photo-grid__title">Dombay</h2>
+            <button class="photo-grid__button-like" type="button"></button>
+          </div>
+        </li>
+        <li class="photo-grid__item">
+          <img class="photo-grid__image" src="./images/mount-elbrus.jpg" alt="photo of Mount Elbrus">
+          <div class="photo-grid__description">
+            <h2 class="photo-grid__title">Mount Elbrus</h2>
+            <button class="photo-grid__button-like" type="button"></button>
+          </div>
+        </li>
+        <li class="photo-grid__item">
+          <img class="photo-grid__image" src="./images/dombay.jpg" alt="photo of Dombay">
+          <div class="photo-grid__description">
+            <h2 class="photo-grid__title">Dombay</h2>
+            <button class="photo-grid__button-like" type="button"></button>
+          </div>
+        </li>
+        <li class="photo-grid__item">
+          <img class="photo-grid__image" src="./images/karachay-cherkessia.jpg" alt="photo of Karachay-Cherkasia">
+          <div class="photo-grid__description">
+            <h2 class="photo-grid__title">Karachay-Cherkasia</h2>
+            <button class="photo-grid__button-like" type="button"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2022 Artur Kulembetov</p>
+  </footer>
+  <div class="popup">
+    <div class="popup__overlay">
+  <form class="popup__form" id="form" name="form">
+    <h2 class="popup__title">Edit profile</h2>
+    <input class="popup__input" type="text" name="name" placeholder="Name" value="Jacques-Yves Cousteau" minlength="2" maxlength="20" pattern="^[a-zA-Zа-яА-я-\s]+$" required>
+    <input class="popup__input" type="text" name="job" placeholder="Job" value="Ocean Explorer" minlength="2" maxlength="50" pattern="^[a-zA-Zа-яА-я-\s]+$" required>
+    <button class="popup__button-save" type="submit">Save</button>
+  </form>
+  <button class="popup__button-close" type="button"></button>
+    </div>
+  </div>
+</body>
+
+</html>

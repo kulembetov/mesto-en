@@ -1,0 +1,24 @@
+.photo-grid__button_like {
+  width: 22px;
+  height: 19px;
+  background-image: url('../../../../images/like.svg');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity .3s ease;
+
+  }
+
+  .photo-grid__button_like:hover {
+    opacity: .5;
+  }
+
+  .photo-grid__button_like:active {
+    background-image: url('../../../../images/like-active.svg');
+  }
