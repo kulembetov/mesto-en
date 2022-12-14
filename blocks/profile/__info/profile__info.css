@@ -1,5 +1,7 @@
 .profile__info {
-  margin-right: auto;
+  display: flex;
+  align-items: center;
+  margin: 25px 0 0 30px;
 }
 
 @media screen and (max-width: 620px) {

@@ -11,14 +11,10 @@
   border: none;
   outline: none;
   cursor: pointer;
-  transition: opacity .3s ease;
+  transition: visibility 0.7s, opacity 0.7s;
 
   }
 
   .photo-grid__button-like:hover {
     opacity: .5;
-  }
-
-  .photo-grid__button-like:active {
-    background-image: url('../../../images/like-active.svg');
   }

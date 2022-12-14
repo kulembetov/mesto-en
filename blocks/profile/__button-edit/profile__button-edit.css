@@ -8,9 +8,8 @@
   background-size: 10px 10px;
   border: 1px solid #FFF;
   outline: none;
-  transition: opacity .3s ease;
   cursor: pointer;
-  padding: 0;
+  transition: opacity .3s ease-in-out;
 }
 
 .profile__button-edit:hover {

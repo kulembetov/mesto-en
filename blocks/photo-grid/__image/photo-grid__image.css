@@ -4,4 +4,10 @@
   display: block;
   object-fit: cover;
   border-radius: 10px 10px 0px 0px;
+  transition: all .3s ease-in-out;
+}
+
+.photo-grid__image:hover {
+  opacity: .9;
+  cursor: pointer;
 }

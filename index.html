@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/favicon.svg">
   <link rel="stylesheet" href="./pages/index.css">
   <title>Mesto</title>
 </head>
@@ -12,79 +13,70 @@
   <header class="header">
     <img class="header__logo" src="./images/header__logo.svg" alt="logo Mesto Russia">
   </header>
-  <main>
+  <main class="content">
     <section class="profile">
-      <img class="profile__avatar" src="./images/avatar.png" alt="profile picture">
-      <div class="profile__info">
-        <div class="profile__box">
-          <h2 class="profile__name">Jacques-Yves Cousteau</h2>
-          <button class="profile__button-edit" type="button"></button>
+      <img class="profile__avatar" src="./images/avatar.png" alt="profile avatar">
+      <div class="profile__description">
+        <div class="profile__name-box">
+          <h1 class="profile__name">Jacques-Yves Cousteau</h1>
+          <button class="profile__button-edit" type="button" aria-label="Profile editing button"></button>
+        </div>
+        <p class="profile__job">Ocean explorer</p>
       </div>
-      <p class="profile__description">Ocean Explorer</p>
-      </div>
-      <button class="profile__button-add" type="button"></button>
+      <button class="profile__button-add" type="button" aria-label="Add photo button"></button>
     </section>
     <section class="photo-grid">
       <ul class="photo-grid__list">
-        <li class="photo-grid__item">
-          <img class="photo-grid__image" src="./images/karachay-cherkessia.jpg" alt="photo of Karachayevsk">
-          <div class="photo-grid__description">
-            <h2 class="photo-grid__title">Karachayevsk</h2>
-            <button class="photo-grid__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="photo-grid__item">
-          <img class="photo-grid__image" src="./images/mount-elbrus.jpg" alt="photo of Mount Elbrus">
-          <div class="photo-grid__description">
-            <h2 class="photo-grid__title">Mount Elbrus</h2>
-            <button class="photo-grid__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="photo-grid__item">
-          <img class="photo-grid__image" src="./images/dombay.jpg" alt="photo of Dombay">
-          <div class="photo-grid__description">
-            <h2 class="photo-grid__title">Dombay</h2>
-            <button class="photo-grid__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="photo-grid__item">
-          <img class="photo-grid__image" src="./images/mount-elbrus.jpg" alt="photo of Mount Elbrus">
-          <div class="photo-grid__description">
-            <h2 class="photo-grid__title">Mount Elbrus</h2>
-            <button class="photo-grid__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="photo-grid__item">
-          <img class="photo-grid__image" src="./images/dombay.jpg" alt="photo of Dombay">
-          <div class="photo-grid__description">
-            <h2 class="photo-grid__title">Dombay</h2>
-            <button class="photo-grid__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="photo-grid__item">
-          <img class="photo-grid__image" src="./images/karachay-cherkessia.jpg" alt="photo of Karachay-Cherkasia">
-          <div class="photo-grid__description">
-            <h2 class="photo-grid__title">Karachay-Cherkasia</h2>
-            <button class="photo-grid__button-like" type="button"></button>
-          </div>
-        </li>
+        <template id="photo-grid-template">
+          <li class="photo-grid__item">
+            <img class="photo-grid__image" src="" alt="">
+            <button class="photo-grid__button-cart" type="button" aria-label="Cart button"></button>
+            <div class="photo-grid__description">
+              <h2 class="photo-grid__title"></h2>
+              <button class="photo-grid__button-like" type="button" aria-label="Кнопка лайка"></button>
+            </div>
+          </li>
+        </template>
       </ul>
     </section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy; 2022 Artur Kulembetov</p>
   </footer>
-  <div class="popup">
+  <div class="popup" id="popup-profile">
     <div class="popup__overlay">
-  <form class="popup__form" id="form" name="form">
-    <h2 class="popup__title">Edit profile</h2>
-    <input class="popup__input" type="text" name="name" placeholder="Name" value="Jacques-Yves Cousteau" minlength="2" maxlength="20" pattern="^[a-zA-Zа-яА-я-\s]+$" required>
-    <input class="popup__input" type="text" name="job" placeholder="Job" value="Ocean Explorer" minlength="2" maxlength="50" pattern="^[a-zA-Zа-яА-я-\s]+$" required>
-    <button class="popup__button-save" type="submit">Save</button>
-  </form>
-  <button class="popup__button-close" type="button"></button>
+      <form class="popup__form" id="form_add-profile-info" name="add-image" method="post">
+        <h2 class="popup__title">Edit profile</h2>
+        <input class="popup__input-name" id="popup-profile-input" type="text" name="name" placeholder="Name" value="" minlength="2" maxlength="20" required>
+        <input class="popup__input-job" type="text" name="job" placeholder="Job" value="" minlength="2" maxlength="50" required>
+        <button class="popup__button-save" type="submit">Save</button>
+      </form>
+      <button class="popup__button-close" type="button" aria-label="Close button"></button>
     </div>
   </div>
+  <div class="popup" id="popup-image-add">
+    <div class="popup__overlay">
+      <form class="popup__form" id="form_add-image" name="add-image" method="post">
+        <h2 class="popup__title">New place</h2>
+        <input class="popup__input-name" id="popup-image-input" type="text" name="title" placeholder="Image name"
+          required>
+        <input class="popup__input-link" type="text" name="link" placeholder="URL" required>
+        <button class=" popup__button-save" type="submit">Save</button>
+        <button class="popup__button-close" type="button" aria-label="Close button"></button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup__image-zoom" id="popup-image-zoom">
+    <div class="popup__image-box">
+      <button class="popup__button-close" type="button" aria-label="Close button"></button>
+      <figure class="popup__figure">
+        <img class="popup__image" src="" alt="">
+        <figcaption class="popup__caption"></figcaption>
+      </figure>
+    </div>
+  </div>
+  <script src="cards.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
